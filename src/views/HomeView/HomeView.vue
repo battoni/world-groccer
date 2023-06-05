@@ -1,1 +1,6 @@
-<template><h1>Home View</h1></template>
+<template>
+  <AppButton
+    label="test"
+    :type="$AppButtonProps.TYPES_ENUM.WARNING"
+  />
+</template>

@@ -1,4 +1,3 @@
-import componentsPlugins from './components';
-import layoutsPlugins from './layouts';
+import { AppButtonPlugin } from '@BaseUi';
 
-export default [...componentsPlugins, ...layoutsPlugins];
+export default [AppButtonPlugin];
