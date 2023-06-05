@@ -1,3 +1,3 @@
-import { AppButtonPlugin } from '@BaseUi';
+import { AppButtonPlugin, AppTextPlugin } from '@BaseUi';
 
-export default [AppButtonPlugin];
+export default [AppButtonPlugin, AppTextPlugin];
