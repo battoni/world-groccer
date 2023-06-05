@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-const { typography } = require('./tailwind-plugins');
 
 module.exports = {
-  content: [],
+  content: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
   darkMode: 'media',
-  plugins: [typography],
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  plugins: [],
   theme: {
     extend: {
       colors: {
