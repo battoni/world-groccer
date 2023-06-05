@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import Libraries from '@Libraries';
 import Plugins from '@Plugins';
+import '@Styles/main.css';
 import App from './App.vue';
 
 const app = createApp(App);
