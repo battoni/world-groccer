@@ -7,6 +7,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@Assets/*": ["./src/assets/*"],
       "@Libraries": ["./src/libraries"],
       "@Plugins": ["./src/plugins"]
     }
