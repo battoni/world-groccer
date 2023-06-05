@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { ROLES_ENUM, TYPES_ENUM } from './types';
-// import { BaseLoader } from '@BaseUi';
+import BaseLoader from '../BaseLoader/BaseLoader.vue';
 
 interface Emit {
   (e: 'click'): void;
@@ -41,12 +41,12 @@ const dynamicClasses = computed(() => {
     :type="role"
     @click="emit('click')"
   >
-    <!-- <BaseLoader
+    <BaseLoader
       v-if="loading"
       :type="props.type"
-    /> -->
+    />
 
-    <template>
+    <template v-else>
       {{ label }}
     </template>
   </button>
