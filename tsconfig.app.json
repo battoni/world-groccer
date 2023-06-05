@@ -11,6 +11,7 @@
       "@BaseUi": ["./src/components/base"],
       "@Composables": ["./src/composables"],
       "@Helpers": ["./src/Helpers"],
+      "@Layouts": ["./src/layouts"],
       "@Libraries": ["./src/libraries"],
       "@Styles/*": ["./src/styles/*"],
       "@Plugins": ["./src/plugins"],

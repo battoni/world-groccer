@@ -17,6 +17,7 @@ export default defineConfig({
         new URL('./src/composables', import.meta.url)
       ),
       '@Helpers': fileURLToPath(new URL('./src/helpers', import.meta.url)),
+      '@Layouts': fileURLToPath(new URL('./src/layouts', import.meta.url)),
       '@Libraries': fileURLToPath(new URL('./src/libraries', import.meta.url)),
       '@Plugins': fileURLToPath(new URL('./src/plugins', import.meta.url)),
       '@Styles': fileURLToPath(new URL('./src/styles/', import.meta.url)),
