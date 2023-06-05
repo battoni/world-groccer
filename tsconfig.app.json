@@ -8,7 +8,9 @@
     "paths": {
       "@/*": ["./src/*"],
       "@Assets/*": ["./src/assets/*"],
+      "@BaseUi": ["./src/components/base"],
       "@Libraries": ["./src/libraries"],
+      "@Styles/*": ["./src/styles/*"],
       "@Plugins": ["./src/plugins"]
     }
   }

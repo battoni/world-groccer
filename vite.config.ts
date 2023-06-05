@@ -14,6 +14,7 @@ export default defineConfig({
         new URL('./src/components/base', import.meta.url)
       ),
       '@Libraries': fileURLToPath(new URL('./src/libraries', import.meta.url)),
+      '@Styles': fileURLToPath(new URL('./src/styles/*', import.meta.url)),
       '@Plugins': fileURLToPath(new URL('./src/plugins', import.meta.url)),
     },
   },
