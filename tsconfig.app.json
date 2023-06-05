@@ -7,6 +7,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@Libraries": ["./src/libraries"],
       "@Plugins": ["./src/plugins"]
     }
   }
