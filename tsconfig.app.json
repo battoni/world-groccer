@@ -17,6 +17,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "@Assets/*": ["./src/assets/*"],
+      "@AppUi": ["./src/components/app"],
       "@BaseUi": ["./src/components/base"],
       "@Composables": ["./src/composables"],
       "@Helpers": ["./src/Helpers"],
