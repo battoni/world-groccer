@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import vue from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
@@ -25,5 +25,8 @@ export default defineConfig({
       '@Types': fileURLToPath(new URL('./src/types', import.meta.url)),
       '@Views': fileURLToPath(new URL('./src/views', import.meta.url)),
     },
+  },
+  test: {
+    setupFiles: ['src/libraries/vitest/setup.ts'],
   },
 });
