@@ -1,7 +1,8 @@
+<script setup lang="ts">
+import BaseIcon from '@/components/base/BaseIcon/BaseIcon.vue';
+import { APP_ICONS } from '@Helpers';
+</script>
+
 <template>
-  <AppText
-    class="text-text-h1"
-    :tag="$AppTextProps.TAGS_ENUM.H1"
-    >Meu Texto</AppText
-  >
+  <BaseIcon :icon="APP_ICONS.faDoorOpen" />
 </template>

@@ -1,24 +1,27 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { FA_ICONS } from '@Helpers/fontAwesomeHelper/types';
-import { STYLE_ENUM } from './types';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { fontAwesomeHelper } from '@Helpers';
+import { PREFIX_ENUM, STYLE_ENUM } from './types';
 
-const props = defineProps({
-  isButton: Boolean,
+interface Props {
+  isButton?: boolean;
+  icon: IconDefinition;
+  style?: STYLE_ENUM;
+  prefix?: PREFIX_ENUM;
+}
 
-  icon: {
-    type: String,
-    required: true,
-    validator: (value) => Object.keys(FA_ICONS).includes(value),
-  },
-
-  style: {
-    default: STYLE_ENUM.SOLID,
-    type: String,
-    validator: (value) => Object.values(STYLE_ENUM).includes(value),
-  },
+const props = withDefaults(defineProps<Props>(), {
+  isButton: false,
+  prefix: PREFIX_ENUM.FA,
+  style: STYLE_ENUM.SOLID,
 });
+
+fontAwesomeHelper().add(props.icon);
+
+const style = computed(() => `${props.prefix}-${props.style}`);
+const iconName = computed(() => `${props.prefix}-${props.icon.iconName}`);
 
 const dynamicClasses = computed(() => {
   return [{ 'is-button': props.isButton }];
@@ -29,7 +32,7 @@ const dynamicClasses = computed(() => {
   <i :class="['icon', ...dynamicClasses]">
     <FontAwesomeIcon
       class="svg"
-      :icon="`fa-${style} fa-${icon}`"
+      :icon="`${style} ${iconName}`"
     />
   </i>
 </template>
