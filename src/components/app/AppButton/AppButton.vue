@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { ROLES_ENUM, TYPES_ENUM } from './types';
-import BaseLoader from '../BaseLoader/BaseLoader.vue';
+import BaseLoader from '../../base/BaseLoader/BaseLoader.vue';
 
 interface Emit {
   (e: 'click'): void;
