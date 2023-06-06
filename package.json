@@ -28,9 +28,12 @@
   "devDependencies": {
     "@histoire/plugin-vue": "^0.16.1",
     "@rushstack/eslint-patch": "^1.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/vue": "^7.0.0",
     "@tsconfig/node18": "^2.0.1",
     "@types/jsdom": "^21.1.1",
     "@types/node": "^18.16.8",
+    "@types/testing-library__jest-dom": "^5.14.6",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/eslint-config-prettier": "^7.1.0",
     "@vue/eslint-config-typescript": "^11.0.3",
