@@ -20,7 +20,7 @@
       "@AppUi": ["./src/components/app"],
       "@BaseUi": ["./src/components/base"],
       "@Composables": ["./src/composables"],
-      "@Helpers": ["./src/Helpers"],
+      "@Helpers": ["./src/helpers"],
       "@Layouts": ["./src/layouts"],
       "@Libraries": ["./src/libraries"],
       "@Styles/*": ["./src/styles/*"],
