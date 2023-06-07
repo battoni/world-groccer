@@ -9,9 +9,11 @@ interface Props {
 const props = defineProps<Props>();
 
 const classes = computed(() => {
+  const isTagP = props.tag && TAGS_ENUM.P;
   const defaultTextClass = props.tag ? `text-${props.tag}` : 'text-p';
+  const defaultTextFont = props.tag === isTagP ? 'font-body' : 'font-title';
 
-  return [defaultTextClass];
+  return [defaultTextClass, defaultTextFont];
 });
 </script>
 
@@ -26,7 +28,7 @@ const classes = computed(() => {
 
 <style scoped>
 .text-h1 {
-  @apply text-5xl;
+  @apply text-5xl font-['Murecho'];
 }
 .text-h2 {
   @apply text-3xl;
@@ -42,5 +44,13 @@ const classes = computed(() => {
 }
 .text-span {
   @apply text-sm;
+}
+
+.font-title {
+  @apply font-['Archivo_Black'];
+}
+
+.font-body {
+  @apply font-['Murecho'];
 }
 </style>

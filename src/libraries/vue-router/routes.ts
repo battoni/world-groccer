@@ -1,3 +1,3 @@
-import { HomeViewRoutes } from '@Views';
+import { AuthViewRoutes, HomeViewRoutes } from '@Views';
 
-export default [...HomeViewRoutes];
+export default [...AuthViewRoutes, ...HomeViewRoutes];
