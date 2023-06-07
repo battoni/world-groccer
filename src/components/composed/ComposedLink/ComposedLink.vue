@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
-import { BaseLink, BaseLinkProps } from '@BaseUi';
+import { BaseIcon, BaseLink, BaseLinkProps } from '@BaseUi';
 import type { ILink } from './type';
 
 interface Props {
@@ -54,26 +54,34 @@ const dynamicClasses = computed(() => {
 
 <style scoped>
 .link {
-  @apply duration-150
+  @apply duration-[150]
     flex
     gap-2
     items-center
     mb-[10px]
     text-text-active
-    transition-[color];
+    transition-[color]
+    transition-[background_color];
 }
 
 .link.is-icon {
-  @apply mb-0;
+  @apply duration-150 
+    mb-0 
+    transition-[color]
+    transition-[background_color];
 }
 
-.link.router-link-active .icon.is-button,
-.link:hover .icon.is-button {
+.link.router-link-active .icon.is-button {
+  @apply bg-background-default text-text-success;
+}
+
+.link:hover .icon.is-button,
+.link.is-icon:hover .icon.is-button {
   @apply bg-background-default text-text-success;
 }
 
 .link.router-link-active,
 .link:hover {
-  @apply text-black;
+  @apply text-black font-bold;
 }
 </style>
