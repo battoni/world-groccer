@@ -105,7 +105,11 @@ const dynamicClasses = computed(() => [activeClass(props.isActive)]);
 
 @media (min-width: 1024px) {
   .navbar {
-    @apply ml-[20px] top-0 w-[calc(100%-60px)];
+    @apply ml-0 top-0 w-[calc(100%-40px)];
+  }
+
+  .navbar.is-active {
+    @apply ml-5;
   }
 
   .layer {
