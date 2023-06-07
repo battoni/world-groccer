@@ -13,4 +13,7 @@
   --color-inactive-red-2: #e43e3e2e;
   --color-inactive-gray-1: #cdcccc38;
   --color-inactive-gray-2: #cdcccc2b;
+
+  --sidenav-width: 200px;
+  --navbar-width: calc(100% - var(--sidenav-width) - 60px);
 }
