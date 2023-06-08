@@ -2,8 +2,10 @@
 import { computed } from 'vue';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { formatterHelper } from '@Helpers';
-import { BaseCard, BaseIcon } from '@BaseUi';
-import { ComposedTag, ComposedTagProps } from '@ComposedUi';
+import { BaseCard } from '@BaseUi';
+import { ComposedTagProps } from '@ComposedUi';
+import KpiCardHeader from '../KpiCardHeader/KpiCardHeader.vue';
+import KpiTag from '../KpiTag/KpiTag.vue';
 
 interface Props {
   hasTags?: boolean;
@@ -26,21 +28,10 @@ const formatter = computed(() =>
 
 <template>
   <BaseCard class="kpi">
-    <BaseIcon
-      class="kpi-icon"
+    <KpiCardHeader
       :icon="icon"
+      :label="label"
     />
-
-    <hr class="divider" />
-
-    <AppText
-      class="mb-2"
-      tag="h2"
-      font="title"
-      size="text-regular"
-    >
-      {{ label }}
-    </AppText>
 
     <template v-if="!hasTags">
       <AppText class="kpi-result offers-sent">
@@ -50,10 +41,7 @@ const formatter = computed(() =>
 
     <template v-else>
       <div class="row">
-        <ComposedTag
-          class="tag"
-          label="control"
-        />
+        <KpiTag label="control" />
 
         <AppText class="kpi-result">
           {{ formatter(results[0]) }}
@@ -61,8 +49,7 @@ const formatter = computed(() =>
       </div>
 
       <div class="row">
-        <ComposedTag
-          class="tag"
+        <KpiTag
           label="experimental"
           :type="ERROR"
         />
@@ -76,14 +63,6 @@ const formatter = computed(() =>
 </template>
 
 <style scoped>
-.kpi {
-  @apply p-5;
-}
-
-.kpi-icon {
-  @apply block text-text-success mb-1 text-xl;
-}
-
 .kpi-result.text {
   @apply text-2xl tracking-wider font-bold;
 }
@@ -92,16 +71,8 @@ const formatter = computed(() =>
   @apply text-4xl;
 }
 
-.divider {
-  @apply border-[var(--color-green)] border-t-4 mb-1 rounded-[4px] w-[30px];
-}
-
 .row {
   @apply flex gap-2 mb-2;
-}
-
-.tag {
-  @apply inline-block text-white font-bold text-sm;
 }
 
 @media (min-width: 1024px) {

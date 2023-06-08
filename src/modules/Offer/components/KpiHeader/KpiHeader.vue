@@ -1,15 +1,20 @@
 <script setup lang="ts">
-import { APP_ICONS } from '@Helpers';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { BaseIcon } from '@BaseUi';
 
-const { faChartLine } = APP_ICONS;
+interface Props {
+  icon: IconDefinition;
+  label: string;
+}
+
+defineProps<Props>();
 </script>
 
 <template>
   <header class="header">
     <BaseIcon
       class="icon"
-      :icon="faChartLine"
+      :icon="icon"
     />
 
     <AppText
@@ -18,7 +23,7 @@ const { faChartLine } = APP_ICONS;
       font="title"
       size="text-large"
     >
-      KPIs Status
+      {{ label }}
     </AppText>
   </header>
 </template>

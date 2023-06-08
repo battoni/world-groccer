@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { APP_ICONS } from '@Helpers';
 import type { Kpi } from './types';
-import { KpiHighlightCard, KpiHighlightHeader } from './components';
+import KpiHeader from '../KpiHeader/KpiHeader.vue';
+import KpiHighlightCard from '../KpiHighlightCard/KpiHighlightCard.vue';
 
-const { faCartShopping, faUsers, faWallet } = APP_ICONS;
+const { faCartShopping, faChartLine, faUsers, faWallet } = APP_ICONS;
 
 const results: Kpi[] = [
   {
@@ -32,7 +33,10 @@ const results: Kpi[] = [
 
 <template>
   <section>
-    <KpiHighlightHeader />
+    <KpiHeader
+      :icon="faChartLine"
+      label="KPI's Status"
+    />
 
     <main class="kpi-highlights">
       <KpiHighlightCard
