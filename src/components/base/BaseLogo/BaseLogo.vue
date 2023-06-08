@@ -24,11 +24,16 @@ defineProps<Props>();
       <AppText
         :class="['company-name', companyNameClasses]"
         tag="h2"
+        font="font-title"
+        size="text-extra-large"
       >
         World Groccer
       </AppText>
 
-      <AppText :class="['slogan', sloganClasses]">
+      <AppText
+        :class="['slogan', sloganClasses]"
+        size="text-medium"
+      >
         where quality meets flavor
       </AppText>
     </section>
