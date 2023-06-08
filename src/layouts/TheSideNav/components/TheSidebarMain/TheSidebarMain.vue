@@ -10,7 +10,7 @@ const links = [
       class: '',
       icon: APP_ICONS.faHouse,
       id: 'Home',
-      target: '/',
+      target: '/home',
     },
   },
   {
