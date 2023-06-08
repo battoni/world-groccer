@@ -21,6 +21,16 @@ const links = [
     isIcon: true,
     link: {
       class: '',
+      icon: APP_ICONS.faUser,
+      id: 'profile',
+      target: '/profile',
+    },
+  },
+  {
+    external: false,
+    isIcon: true,
+    link: {
+      class: '',
       icon: APP_ICONS.faBell,
       id: 'notifications',
       target: '/notifications',
