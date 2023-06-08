@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { APP_ICONS } from '@Helpers';
 import { ComposedLink } from '@ComposedUi';
-import { LogoutButton } from '@AuthModule';
 
 const links = [
   {
@@ -20,8 +19,8 @@ const links = [
     link: {
       class: '',
       icon: APP_ICONS.faCartShopping,
-      id: 'Offers',
-      target: '/offers',
+      id: 'CLV Trending',
+      target: '/trending-view',
     },
   },
   {
@@ -29,12 +28,23 @@ const links = [
     isIcon: false,
     link: {
       class: '',
-      icon: APP_ICONS.faUsers,
-      id: 'Groups',
-      target: '/groups',
+      icon: APP_ICONS.faMoneyBillTrendUp,
+      id: 'Offers',
+      target: '/offers',
     },
   },
 ];
+
+const logoutLink = {
+  external: false,
+  isIcon: false,
+  link: {
+    class: '',
+    icon: APP_ICONS.faDoorOpen,
+    id: 'Logout',
+    target: '/signin',
+  },
+};
 </script>
 
 <template>
@@ -45,7 +55,7 @@ const links = [
       v-bind="link"
     />
 
-    <LogoutButton class="logout" />
+    <ComposedLink v-bind="logoutLink" />
   </main>
 </template>
 

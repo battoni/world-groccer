@@ -2,6 +2,8 @@
 import { computed } from 'vue';
 import { TheDashboardLayout } from '@Layouts';
 import { KpiClvTrending, useOfferStore } from '@OfferModule';
+
+// TODO : API integration
 const data = [
   { label: '2021-03-13', expSum: 2, ctrlSum: 2 },
   { label: '2021-03-14', expSum: 54, ctrlSum: 4 },

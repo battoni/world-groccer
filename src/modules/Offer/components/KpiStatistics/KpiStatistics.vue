@@ -10,7 +10,7 @@ const { ERROR } = ComposedTagProps.TYPES_ENUM;
 
 const { setThousandsSeparator } = formatterHelper();
 
-const results = [11111, 22222];
+const results = [0, 0];
 </script>
 
 <template>
@@ -23,7 +23,7 @@ const results = [11111, 22222];
     <BaseCard>
       <KpiCardHeader
         :icon="faCheckDouble"
-        label="Select period to aggregate"
+        label="(soon) Select period to aggregate"
       />
 
       <div class="row">
@@ -62,6 +62,6 @@ const results = [11111, 22222];
 }
 
 .row {
-  @apply flex gap-2 mb-2;
+  @apply flex gap-2 mb-2 items-center;
 }
 </style>

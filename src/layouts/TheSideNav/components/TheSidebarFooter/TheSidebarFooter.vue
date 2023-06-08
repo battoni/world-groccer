@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { BaseIcon } from '@BaseUi';
-import { LogoutButton } from '@AuthModule';
+import { ComposedLink } from '@ComposedUi';
 import { APP_ICONS } from '@Helpers';
 
 interface Emits {
@@ -8,6 +8,17 @@ interface Emits {
 }
 
 const emit = defineEmits<Emits>();
+
+const logoutLink = {
+  external: false,
+  isIcon: false,
+  link: {
+    class: '',
+    icon: APP_ICONS.faDoorOpen,
+    id: 'Logout',
+    target: '/signin',
+  },
+};
 </script>
 
 <template>
@@ -22,7 +33,7 @@ const emit = defineEmits<Emits>();
       />
     </div>
 
-    <LogoutButton class="logout" />
+    <ComposedLink v-bind="logoutLink" />
   </footer>
 </template>
 
