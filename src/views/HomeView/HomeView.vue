@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { TheDashboardLayout } from '@Layouts';
+import { KpiHighlight } from '@OfferModule';
 </script>
 
-<template><TheDashboardLayout>TEste</TheDashboardLayout></template>
+<template>
+  <TheDashboardLayout>
+    <KpiHighlight />
+  </TheDashboardLayout>
+</template>
