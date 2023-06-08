@@ -1,13 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { TheDashboardLayout } from '@Layouts';
-import {
-  KpiClvTrending,
-  KpiHighlight,
-  KpiStatistics,
-  useOfferStore,
-} from '@OfferModule';
-
+import { KpiClvTrending, useOfferStore } from '@OfferModule';
 const data = [
   { label: '2021-03-13', expSum: 2, ctrlSum: 2 },
   { label: '2021-03-14', expSum: 54, ctrlSum: 4 },
@@ -58,48 +52,20 @@ const data = [
   { label: '2021-04-28', expSum: 962.5, ctrlSum: 761.75 },
   { label: '2021-04-29', expSum: 1014, ctrlSum: 762.75 },
 ];
-
 const offerStore = useOfferStore();
 
 offerStore.$patch({ repeaters: data });
 
 const chartData = computed(() => {
-  const datasets = offerStore.dataSets.map((dataset) => {
-    dataset.data.slice(data.length - 10);
-
-    return dataset;
-  });
-
-  return {
-    labels: offerStore.labels.slice(offerStore.labels.length - 10),
-    datasets,
-  };
+  return { labels: offerStore.labels, datasets: offerStore.dataSets };
 });
 </script>
 
 <template>
   <TheDashboardLayout>
-    <section class="highlights-section">
-      <KpiHighlight />
-    </section>
-
-    <section class="statistics-section">
-      <KpiStatistics />
-
-      <KpiClvTrending
-        header="CLV Daily Trending View - last 10 days"
-        :hasLink="true"
-        :chartData="chartData"
-      />
-    </section>
+    <KpiClvTrending
+      header="CLV Daily Trending View"
+      :chartData="chartData"
+    />
   </TheDashboardLayout>
 </template>
-
-<style scoped>
-.highlights-section {
-  @apply mb-5;
-}
-.statistics-section {
-  @apply flex gap-5 justify-start;
-}
-</style>
