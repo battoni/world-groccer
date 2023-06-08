@@ -25,8 +25,9 @@
       "@Helpers": ["./src/helpers"],
       "@Layouts": ["./src/layouts"],
       "@Libraries": ["./src/libraries"],
-      "@Styles/*": ["./src/styles/*"],
+      "@OfferModule": ["./src/modules/Offer"],
       "@Plugins": ["./src/plugins"],
+      "@Styles/*": ["./src/styles/*"],
       "@Types": ["./src/Types"],
       "@Views": ["./src/views"]
     }

@@ -32,6 +32,9 @@ export default defineConfig({
       '@AuthModule': fileURLToPath(
         new URL('./src/modules/Auth', import.meta.url)
       ),
+      '@OfferModule': fileURLToPath(
+        new URL('./src/modules/Offer', import.meta.url)
+      ),
     },
   },
   test: {
