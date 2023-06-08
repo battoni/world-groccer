@@ -5,8 +5,8 @@ enum TYPES_ENUM {
   WARNING = 'warning',
 }
 
-const baseTagProps = {
+const ComposedTagProps = {
   TYPES_ENUM,
 };
 
-export { baseTagProps, TYPES_ENUM };
+export { ComposedTagProps, TYPES_ENUM };
