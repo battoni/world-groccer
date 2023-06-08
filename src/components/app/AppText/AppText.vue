@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { TAGS_ENUM } from './types';
+import { FONTS_ENUM, TAGS_ENUM } from './types';
 
 interface Props {
   tag?: TAGS_ENUM;
+  font?: FONTS_ENUM;
+  size?: string;
 }
 
 const props = defineProps<Props>();
 
 const classes = computed(() => {
-  const isTagP = props.tag && TAGS_ENUM.P;
-  const defaultTextClass = props.tag ? `text-${props.tag}` : 'text-p';
-  const defaultTextFont = props.tag === isTagP ? 'font-body' : 'font-title';
+  const defaultTextClass = props.size ?? 'text-default';
+  const defaultTextFont = props.font ?? FONTS_ENUM.BODY;
 
-  return [defaultTextClass, defaultTextFont];
+  return ['text', defaultTextClass, defaultTextFont];
 });
 </script>
 
@@ -27,27 +28,27 @@ const classes = computed(() => {
 </template>
 
 <style scoped>
-.text-h1 {
-  @apply text-5xl font-['Murecho'];
+.text-extra-large {
+  @apply text-5xl;
 }
-.text-h2 {
+.text-large {
   @apply text-3xl;
 }
-.text-h3 {
+.text-medium {
   @apply text-xl;
 }
-.text-h4 {
+.text-regular {
   @apply text-lg;
 }
-.text-p {
+.text-default {
   @apply text-base;
 }
-.text-span {
+.text-small {
   @apply text-sm;
 }
 
 .font-title {
-  @apply font-['Archivo_Black'];
+  @apply font-['Murecho'] font-bold;
 }
 
 .font-body {

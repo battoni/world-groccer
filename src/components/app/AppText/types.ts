@@ -7,8 +7,14 @@ enum TAGS_ENUM {
   SPAN = 'span',
 }
 
+enum FONTS_ENUM {
+  TITLE = 'font-title',
+  BODY = 'font-body',
+}
+
 const AppTextProps = {
+  FONTS_ENUM,
   TAGS_ENUM,
 };
 
-export { AppTextProps, TAGS_ENUM };
+export { AppTextProps, FONTS_ENUM, TAGS_ENUM };
