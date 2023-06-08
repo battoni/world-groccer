@@ -1,3 +1,12 @@
+# World Groccer
+
+## Important links
+
+[Live preview](https://world-groccer.vercel.app/)
+[Test instructions](https://docs.google.com/document/d/18VZe13NyVr960ObDDBJlxoH69Go5OVnpVe0iSRh2tTM/edit)
+[Arquitechture and Next steps](https://booming-allium-f1b.notion.site/Offer-Fit-ec895254575b47b980326454a7c22d65)
+[About me](https://guilherme.battoni.dev)
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
@@ -52,23 +61,3 @@ npm run lint
 ```sh
 npm run story:dev
 ```
-
-## Test instructions
-
-https://docs.google.com/document/d/18VZe13NyVr960ObDDBJlxoH69Go5OVnpVe0iSRh2tTM/edit
-
-## Next steps
-
-Coming soon
-
-## Arquitechture details
-
-Coming soon
-
-## About me
-
-[About me](https://guilherme.battoni.dev)
-
-## Live preview
-
-[Live preview](https://world-groccer.vercel.app/)
