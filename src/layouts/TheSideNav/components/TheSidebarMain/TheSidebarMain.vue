@@ -14,6 +14,26 @@ const links = [
       target: '/',
     },
   },
+  {
+    external: false,
+    isIcon: false,
+    link: {
+      class: '',
+      icon: APP_ICONS.faCartShopping,
+      id: 'Offers',
+      target: '/offers',
+    },
+  },
+  {
+    external: false,
+    isIcon: false,
+    link: {
+      class: '',
+      icon: APP_ICONS.faUsers,
+      id: 'Groups',
+      target: '/groups',
+    },
+  },
 ];
 </script>
 

@@ -2,6 +2,7 @@ import {
   faAngleDown,
   faBars,
   faBell,
+  faCartShopping,
   faCheck,
   faCircleXmark,
   faDoorOpen,
@@ -11,6 +12,7 @@ import {
   faTrash,
   faTriangleExclamation,
   faUser,
+  faUsers,
   faWallet,
   type IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
@@ -23,6 +25,7 @@ export const APP_ICONS = {
   faAngleDown,
   faBars,
   faBell,
+  faCartShopping,
   faCheck,
   faCircleXmark,
   faDoorOpen,
@@ -32,5 +35,6 @@ export const APP_ICONS = {
   faTrash,
   faTriangleExclamation,
   faUser,
+  faUsers,
   faWallet,
 };
