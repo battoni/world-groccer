@@ -11,7 +11,7 @@ import { TheCentralizedLayout } from '@Layouts';
       class="button"
       :type="$AppButtonProps.TYPES_ENUM.INFORMATION"
       label="Sign In"
-      @click="$router.push('/')"
+      @click="$router.push('/home')"
     />
   </TheCentralizedLayout>
 </template>

@@ -1,6 +1,6 @@
 export default [
   {
-    path: '/signin',
+    path: '/',
     name: 'signin',
     component: () => import('@/views/AuthView/AuthView.vue'),
   },

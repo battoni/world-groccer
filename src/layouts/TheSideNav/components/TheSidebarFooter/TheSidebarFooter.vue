@@ -16,7 +16,7 @@ const logoutLink = {
     class: '',
     icon: APP_ICONS.faDoorOpen,
     id: 'Logout',
-    target: '/signin',
+    target: '/',
   },
 };
 </script>
