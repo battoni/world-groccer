@@ -33,7 +33,10 @@ const dynamicClasses = computed(() => {
       :data-testid="`${testId}_base-icon`"
     />
 
-    <AppText v-if="!isIcon">
+    <AppText
+      v-if="!isIcon"
+      font="font-body"
+    >
       {{ link.id }}
     </AppText>
   </RouterLink>
@@ -60,6 +63,7 @@ const dynamicClasses = computed(() => {
     items-center
     mb-[10px]
     text-text-active
+    font-medium
     transition-[color]
     transition-[background_color];
 }
@@ -82,6 +86,6 @@ const dynamicClasses = computed(() => {
 
 .link.router-link-active,
 .link:hover {
-  @apply text-black font-bold;
+  @apply text-text-success font-semibold;
 }
 </style>
