@@ -2,10 +2,17 @@
 
 ## Important links
 
-- [Live preview](https://world-groccer.vercel.app/)
-- [Test instructions](https://docs.google.com/document/d/18VZe13NyVr960ObDDBJlxoH69Go5OVnpVe0iSRh2tTM/edit)
-- [Arquitechture and Next steps](https://booming-allium-f1b.notion.site/Offer-Fit-ec895254575b47b980326454a7c22d65)
-- [About me](https://guilherme.battoni.dev)
+- [Live Preview](https://world-groccer.vercel.app/)
+
+- [Storybook](https://world-groccer-stories.vercel.app/)
+
+- [Doccumentation](https://world-groccer-docs.vercel.app//)
+
+- [About me](https://world-groccer-docs/about-me)
+
+- [Architecture](https://world-groccer-docs/architecture)
+
+- [How to use](https://world-groccer-docs/features)
 
 ## Recommended IDE Setup
 
@@ -32,23 +39,33 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Hot-Reload development
+
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Storybook with [Histoire](https://histoire.dev/)
 
 ```sh
-npm run build
+npm run story:dev
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### Docs with [VitePress](https://vitepress.dev/)
 
 ```sh
-npm run test:unit
+npm run docs:dev
 ```
+
+### Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+npm run test:unit --watch
+```
+
+## Linters
 
 ### Lint with [ESLint](https://eslint.org/)
 
@@ -56,8 +73,30 @@ npm run test:unit
 npm run lint
 ```
 
-### Stories [ESLint](https://eslint.org/)
+### Format with [Prettier](https://prettier.io/)
 
 ```sh
-npm run story:dev
+npm run format
 ```
+
+## For production
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Compile stories for productions
+
+```sh
+npm run story:build
+```
+
+### Compile docs for production
+
+```sh
+npm run docs:build
+```
+
+See [`package.json`](https://github.com/battoni/world-groccer/blob/main/package.json) scripts section for more.
