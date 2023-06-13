@@ -14,4 +14,4 @@ What is coming:
 
 - [🤝 Conventions](/conventions)
 
-Grab your coffee and let's go!
+☕ Grab your coffee and let's go!
