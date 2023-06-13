@@ -15,7 +15,7 @@ features:
   - title: Meet the maker
     icon: 🧑🏼‍💻
     details: Learn more about me, my skills, aspirations, and collaborative potential
-  - title: Architechture
+  - title: Architecture
     icon: 🧬
     details: Dive deep into the code and understand the intricacies of this project
   - title: Let's work together

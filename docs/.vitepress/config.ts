@@ -13,26 +13,32 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Getting started',
-        collapsed: true,
+        collapsed: false,
         items: [
-          { text: 'About me', link: '/about-me' },
-          { text: 'About the project', link: '/about-the-project' },
-          { text: 'Quick links', link: '/quick-links' },
-          { text: 'Available features', link: '/features' },
+          { text: '👨🏼‍💻 About me', link: '/about-me' },
+          {
+            text: '<img class="logo-nav" src="/logo-min.png" /> About the project',
+            link: '/about-the-project',
+          },
+          { text: '⚡ Quick links', link: '/quick-links' },
+          { text: '🛠️ Available features', link: '/features' },
         ],
       },
       {
-        text: 'Architechture',
-        collapsed: true,
+        text: 'Architecture',
+        link: '/architecture',
+        collapsed: false,
         items: [
-          { text: 'Technologies', link: '/markdown-examples' },
-          { text: 'Concepts', link: '/api-examples' },
-          { text: 'Implementation', link: '/markdown-examples' },
-          { text: 'Conventions', link: '/markdown-examples' },
+          { text: '🗃️ Technologies', link: '/technologies' },
+          { text: '🔑 Concepts', link: '/concepts' },
+          { text: '💻 Implementation', link: '/implementation' },
+          { text: '🤝 Conventions', link: '/conventions' },
         ],
       },
       {
-        items: [{ text: 'Take me out of market!', link: '/markdown-examples' }],
+        items: [
+          { text: ' 🚀 Ready to partner up?', link: '/lets-work-together' },
+        ],
       },
     ],
 

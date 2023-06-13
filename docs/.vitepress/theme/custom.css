@@ -5,3 +5,8 @@
 .VPHome {
   padding-top: 35px;
 }
+
+.logo-nav {
+  display: inline-block;
+  max-width: 18px;
+}

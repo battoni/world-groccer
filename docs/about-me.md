@@ -1,4 +1,4 @@
-# About me
+# 👨🏼‍💻 About me
 
 Hello there, I am Guilherme Battoni! 🙋🏼‍♂️
 
