@@ -3,6 +3,12 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'World Groccer',
   description: 'More than another Vue SPA',
+  head: [
+    [
+      'link',
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
+    ],
+  ],
   themeConfig: {
     logo: 'logo.png',
     nav: [
